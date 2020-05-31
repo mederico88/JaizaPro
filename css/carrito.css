@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+body{
+    background-image: url(/imagenes/muelle.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(10, 10, 10, 0.3);
+}
+
+header{
+    background-color: rgba(0, 12, 51, 0.6);
+    height: 150px;
+    position: relative;
+    color: bisque;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+:focus{
+    outline: none;
+}
+
+.cubrir{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(10, 10, 10, 0.3);
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;
+}
+
+nav li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav li span{
+    padding-left: 5px;
+}
+li a{
+    padding: 5px;
+    background-color: antiquewhite;
+    text-decoration: none;
+    color: black;
+    padding: 6px 10px;
+    font-weight: 600;
+}
+
+.carro ion-icon {
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+.carro a{
+    background-image: linear-gradient(to top, rgb(3, 0, 51), blue);
+    color: beige;
+    text-shadow: rgb(3, 0, 51);
+    box-shadow: 3px 3px 4px rgb(52, 74, 85);/*rgb(3, 0, 51);*/
+    text-align: center;
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+
+.carro a:active{
+    top: 2px;
+    box-shadow: inset 3px 3px 4px blue;
+    outline: none;
+}
+
+.cuerpoPag,
+.productosENcarroContenido{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.imagenVenta{
+    height: 20%;
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    width: 400px;
+    overflow: auto;
+}
+
+.add-carro{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 12, 51, 0.6);
+    color: bisque;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+}
+
+.imagenVenta:hover .carro1,
+.imagenVenta:hover .carro2,
+.imagenVenta:hover .carro3,
+.imagenVenta:hover .carro4 {
+    bottom: 50px;
+    opacity: 0.8;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.imagenVenta h3{
+    font-weight: 600;
+    background-color: rgba(0, 12, 51, 0.6);
+    color: bisque;
+    text-align: center;
+}
+
+
+/*--------------pagina del carrito----------------------*/
+.productosENcarroContenido{
+    max-width: 800px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.encabezadoProducto{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;    
+    background-color: rgba(0, 12, 51, 0.6);
+}
+
+.productos{
+    width: 100%;    
+    background-color: rgba(0, 12, 51, 0.6);
+    color: bisque;
+    text-align: center;
+    font-weight: 500;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cadaArticulo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: groove 1px rgb(51, 51, 51);
+}
+.imagencarrito img{
+    width: 81%;
+    position: relative;
+    margin: 0 5px;
+    max-width: 295px;
+}
+#btnborrar{
+    position: absolute;
+    transition: all 0.6s;
+    opacity: 0;
+    align-content: flex-start;
+    margin: 3px 8px;
+}
+
+.imagencarrito:hover #btnborrar {
+    opacity: 0.8;
+    text-decoration: none !important;
+    z-index: 1;
+}
+
+
+.imagencarrito button:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.cadaArticulo button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    background-color: rgba(0, 12, 51, 0.6);
+    /*margin: auto 3px;*/
+    color: rgba(240, 250, 255, 0.801);
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.cadaArticulo button:hover {
+    color: rgba(0, 12, 51, 0.6);
+    background-color: rgba(240, 250, 255, 0.801);
+}
+
+
+.tituloProducto,
+.productico{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+
+.productico ion-icon{
+    position: absolute;
+    width: 30px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+.productico span {
+    font-weight: 500;
+    color: bisque;
+    text-align: center;
+    width: 31%;
+}
+
+.precioP,
+.precio{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.cantidad,
+.cantidades{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.total,
+.totales{
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+.encabezadoProducto h5{
+    font-weight: 600;
+    background-color: rgba(0, 12, 51, 0.6);
+    color: bisque;
+    padding: 5px 5px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 12, 51, 0.6);
+}
+
+.compraTotalContenido{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 15px 0;
+    font-weight: 700;
+}
+
+.compraTotalTITULO{
+    width: 30%;
+}
+
+.compraTotal{
+    width: 10%;
+}
