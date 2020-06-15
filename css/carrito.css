@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url(/imagenes/muelle.jpeg);
+    background-image: url(../imagenes/muelle.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
